@@ -24,7 +24,7 @@ Vue.use(Vuetify, {
     VTooltip,
   },
   theme: {
-    primary: '#FFF689',
+    primary: '#FFF',
     secondary: '#9D9C9C',
     accent: '#90BE6D',
     error: '#EF626C',

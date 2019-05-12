@@ -2,6 +2,8 @@
   .posts-main
     display: flex
     flex-flow: row wrap
+    max-width: 960px
+    margin: 0 auto
   .post_item
     display: block
     width: 100%
@@ -13,23 +15,51 @@
     &.post-large
       height: 375px
       margin-bottom: 26px
+      &:hover
+        .post_item__inner
+          &:after
+            background: rgba(0,79,255,.7)
       .post_details__title
-        font-family: $font-heavy
-        color: $color-white
-        font-size: 32px
-        line-height: 32px
-        letter-spacing: 0.4px
         margin-bottom: 10px
     &.post-small
       width: calc(50% - 13px)
       height: 243px
       margin-bottom: 26px
+      overflow: hidden
+      .post_details__title
+        margin-bottom: 5px
+      .post_item__inner
+        &:after
+          bottom: 0
+          left: 0
+          right: 0
+          background : $color-accent
+          transition: .5s
+          transform translateY(100%)
+      &:hover
+        .post_item__inner
+          &:after
+            transform: translateY(0)
       &:nth-child(2n + 1)
         margin-left: 26px
+      &:nth-last-child(1)
+        margin-bottom: 0
+      &:nth-last-child(2)
+        margin-bottom: 0
     &__inner
       position: relative
       width: 100%
       height: 100%
+      &:after
+        content: ''
+        position absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        z-index: 7
+        background: transparent
+        transition: background .5s ease
     .post_bg
       position: relative
     .post_details
@@ -37,7 +67,8 @@
       left: 0
       right: 0
       bottom: 0
-      padding: 32px 24px 24px 32px
+      z-index: 15
+      padding: 32px 24px 20px 32px
       .excerpt
         font-family: $font-light
         color: $color-white
@@ -56,9 +87,8 @@
       &__info
         display: flex
         align-items: flex-end
- 
 
 
-      
-        
-    
+
+
+

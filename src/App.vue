@@ -14,6 +14,7 @@ export default {
     TheHeader: () => import(/* webpackChunkName: 'TheHeader' */ 'Components/TheHeader/TheHeader'),
     TheFooter: () => import(/* webpackChunkName: 'TheFooter' */ 'Components/TheFooter/TheFooter'),
     ThePosts: () => import(/* webpackChunkName: 'ThePosts' */ 'Components/ThePosts/ThePosts'),
+    TheArticleFilter: () => import(/*webpackChunkName: 'TheArticleFilter'*/ 'Components/TheArticleFilter/TheArticleFilter'),
   },
   computed: {
     ...mapGetters('router', [

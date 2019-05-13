@@ -1,7 +1,7 @@
 <template lang="pug">
-    v-container(grid-list-lg).pa-0
+    v-container(grid-list-lg)
         v-layout(row)
-            v-flex(lg8 offset-lg2 xs12).pt-0.pb-0
+            v-flex(xs12 md10 offset-md1 lg8 offset-lg2)
                 v-card
                     .filter-articles
                         h5.filter-title

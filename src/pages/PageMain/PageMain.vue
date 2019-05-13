@@ -23,4 +23,5 @@
 
 <style lang="stylus" scoped>
 @import '../../styles/_variables'
+
 </style>

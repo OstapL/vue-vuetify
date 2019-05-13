@@ -1,6 +1,6 @@
 .all-posts
-  max-width: 960px
-  margin: 15px auto 0 auto
+  //max-width: 960px
+  //margin: 15px auto 0 auto
   .post_item
     padding: 25px 0
     display: flex
@@ -8,6 +8,8 @@
     text-decroration: none
     cursor: pointer
     border-top: 2px solid $color-laight-gray
+    @media $mobile
+      display: block
     &:first-child
       border-top: 2px solid transparent
     &:hover
@@ -16,6 +18,10 @@
     &__pulish-date
       text-align: center
       width: 130px
+      @media $mobile
+        display: flex
+        width: auto
+        align-items: baseline
       .day
         color: $color-accent
         font-family $font-medium
@@ -23,12 +29,18 @@
         line-height: 64px
         letter-spacing: 3px
         margin-bottom 8px
+        @media $mobile
+          font-size: 35px
+          line-heigth: 35px
       .date
         font-family: $font-light
         font-size: 15px
         line-height: 28px
         color: $color-dark-gray
         text-transform: uppercase
+        @media $mobile
+          font-size: 15px
+          line-height: 15px
     &__details
       .post_name
         max-width: 460px
@@ -43,6 +55,8 @@
         color: $color-dark-gray
     &__image
       margin-left: auto
+      @media $mobile
+        display: none
 .more-articles
   text-align: center
   margin-top: 30px

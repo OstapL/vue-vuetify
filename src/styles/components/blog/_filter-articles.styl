@@ -1,14 +1,20 @@
 .all-articles
-  padding-top: 65px
+  //padding-top: 65px
   background-image: url('/src/img/bg-pattern.svg')
   background-size: cover
   background-repeat: no-repeat
+  @media $mobile
+    //padding: 0 15px
   .filter-articles
-    max-width: 960px
-    margin: 0 auto
+    //max-width: 960px
+    //margin: 0 auto
     border-bottom: 1px solid #ccc
     border-top: 1px solid #ccc
     padding: 23px 0 16px 97px
+    @media $desktop
+      padding: 23px 0 16px 0
+
+
     .filter-title
       margin-bottom: 16px
     .filter-list

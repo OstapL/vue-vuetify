@@ -1,12 +1,16 @@
 .blog-page
   .posts-main
-    display: flex
-    flex-flow: row wrap
-    max-width: 960px
-    margin: 0 auto
+    //max-width: 960px
+    //margin: 0 auto
+    .posts-slider
+      width: 100%
+      display: flex
+      flex-flow: row wrap
   .post_item
     display: block
     width: 100%
+    &__details
+      //padding: 0 20px
     .post_bg
         height: 100%
         background-size: cover
@@ -15,6 +19,8 @@
     &.post-large
       height: 375px
       margin-bottom: 26px
+      @media $mobile
+        margin-bottom: 0
       &:hover
         .post_item__inner
           &:after
@@ -26,6 +32,8 @@
       height: 243px
       margin-bottom: 26px
       overflow: hidden
+      @media $mobile
+        height: 375px
       .post_details__title
         margin-bottom: 5px
       .post_item__inner
@@ -42,8 +50,10 @@
             transform: translateY(0)
       &:nth-child(2n + 1)
         margin-left: 26px
+
       &:nth-last-child(1)
         margin-bottom: 0
+
       &:nth-last-child(2)
         margin-bottom: 0
     &__inner
@@ -76,6 +86,7 @@
         line-height: 24px
         letter-spacing: 0.32px
         padding-bottom: 24px
+        max-width: 500px
       .date
         font-family: $font-light
         text-transform: uppercase
@@ -84,11 +95,10 @@
         line-height: 28px
         letter-spacing: 0.32px
         margin-left: auto
+        white-space: nowrap
       &__info
         display: flex
         align-items: flex-end
-
-
 
 
 

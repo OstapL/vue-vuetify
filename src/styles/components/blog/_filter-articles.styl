@@ -1,0 +1,45 @@
+.all-articles
+  //padding-top: 65px
+  background-image: url('/src/img/bg-pattern.svg')
+  background-size: cover
+  background-repeat: no-repeat
+  @media $mobile
+    //padding: 0 15px
+  .filter-articles
+    //max-width: 960px
+    //margin: 0 auto
+    border-bottom: 1px solid #ccc
+    border-top: 1px solid #ccc
+    padding: 23px 0 16px 97px
+    @media $desktop
+      padding: 23px 0 16px 0
+
+
+    .filter-title
+      margin-bottom: 16px
+    .filter-list
+      li
+        float: left
+        margin-right: 8px
+        margin-bottom: 8px
+        &:last-child
+          margin-right: 0
+        a
+          display block
+          text-decoration: none
+          font-family: $font-medium
+          color: $color-dark-gray
+          font-size: 14px
+          line-height: 22px
+          letter-spacing: 0.3px
+          background-color: $color-light-blue
+          border-radius: 4px
+          padding: 6px 8px
+          transition: .5s ease
+          &:hover
+            background-color: $color-navy
+            color: $color-white
+
+
+
+

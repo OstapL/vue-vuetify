@@ -1,0 +1,87 @@
+.all-posts
+  //max-width: 960px
+  //margin: 15px auto 0 auto
+  .post_item
+    padding: 25px 0
+    display: flex
+    align-items: center
+    text-decroration: none
+    cursor: pointer
+    border-top: 2px solid $color-laight-gray
+    @media $mobile
+      display: block
+    &:first-child
+      border-top: 2px solid transparent
+    &:hover
+      .post_name
+        color: $color-accent
+    &__pulish-date
+      text-align: center
+      width: 130px
+      @media $mobile
+        display: flex
+        width: auto
+        align-items: baseline
+      .day
+        color: $color-accent
+        font-family $font-medium
+        font-size: 64px
+        line-height: 64px
+        letter-spacing: 3px
+        margin-bottom 8px
+        @media $mobile
+          font-size: 35px
+          line-heigth: 35px
+      .date
+        font-family: $font-light
+        font-size: 15px
+        line-height: 28px
+        color: $color-dark-gray
+        text-transform: uppercase
+        @media $mobile
+          font-size: 15px
+          line-height: 15px
+    &__details
+      .post_name
+        max-width: 460px
+        color: $color-dark-gray
+        transition: .5s ease
+        margin-bottom: 16px
+      .post_excerpt
+        max-width: 620px
+        font-family: $font-light
+        font-size: 14px
+        line-height: 24px
+        color: $color-dark-gray
+    &__image
+      margin-left: auto
+      @media $mobile
+        display: none
+.more-articles
+  text-align: center
+  margin-top: 30px
+  a
+    font-family: $font-light
+    font-size: 14px
+    line-height: 24px
+    letter-spacing: 2.4px
+    text-transform: uppercase
+    color: $color-accent
+    text-decoration: none
+    display: inline-block
+    position: relative
+    overflow: hidden
+    &:hover
+      &:before
+        transform: translate(0)
+    &:before
+      content: ''
+      position: absolute
+      bottom: 0
+      left: -2px
+      display: block
+      height: 1px
+      width: 100%
+      transition: .5s ease
+      background-color: $color-accent
+      transform: translate(-100%)
